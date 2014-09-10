@@ -1,31 +1,31 @@
-# Return random praise.
+# Return random praise (using "UK English").
 praise <- function() {
   swirl_is_fun <- getOption("swirl_is_fun")
   
   if(is.null(swirl_is_fun) || isTRUE(swirl_is_fun)) {
-    phrases <- c("You got it!",
-                 "Nice work!",
-                 "Keep up the great work!",
-                 "You are doing so well!",
-                 "All that hard work is paying off!",
-                 "You nailed it! Good job!",
-                 "You're the best!",
-                 "You are amazing!",
-                 "Keep working like that and you'll get there!",
-                 "Perseverance, that's the answer.",
-                 "Great job!",
-                 "You are quite good my friend!",
-                 "Your dedication is inspiring!",
-                 "You got it right!",
-                 "That's correct!",
-                 "You are really on a roll!",
-                 "Excellent job!",
-                 "All that practice is paying off!",
-                 "Excellent work!",
-                 "That's a job well done!",
-                 "That's the answer I was looking for.")
+    phrases <- c("Not bad",
+                 "What you've done is pretty good so far",
+                 "Quite nice",
+                 "That's probably how I would have done that too",
+                 "You're improving",
+                 "Not as bad as it could have been, certainly",
+                 "Good stuff",
+                 "Better than some",
+                 "Gosh, would you look at that...",
+                 "Adequate",
+                 "Yarp",
+                 "Well played",
+                 "Got there in the end, eh?",
+                 "You seem to have gotten it right",
+                 "That is correct",
+                 "Perhaps you've done this before?",
+                 "Rather good",
+                 "This will suffice",
+                 "Very nice",
+                 "I admire your work",
+                 "That seems to be the answer I was looking for")
   } else {
-    phrases <- "Correct!"
+    phrases <- "Indeed"
   }
   sample(phrases, 1)
 }
@@ -35,22 +35,22 @@ tryAgain <- function() {
   swirl_is_fun <- getOption("swirl_is_fun")
   
   if(is.null(swirl_is_fun) || isTRUE(swirl_is_fun)) {
-    phrases <- c("Almost! Try again.",
-                 "You almost had it, but not quite. Try again.",
-                 "Give it another try.",
-                 "Not quite! Try again.",
-                 "Not exactly. Give it another go.",
-                 "That's not exactly what I'm looking for. Try again.",
-                 "Nice try, but that's not exactly what I was hoping for. Try again.",
-                 "Keep trying!",
-                 "That's not the answer I was looking for, but try again.",
-                 "Not quite right, but keep trying.",
-                 "You're close...I can feel it! Try it again.",
-                 "One more time. You can do it!",
-                 "Not quite, but you're learning! Try again.",
-                 "Try again. Getting it right on the first try is boring anyway!")
+    phrases <- c("Worse things happen at sea, old chap",
+                 "Oh dear...  :s",
+                 "Sadly not",
+                 "Perhaps you meant something else?",
+                 "Maybe have a nice cuppa and try again?",
+                 "Almost",
+                 "Terribly sorry, but that's not correct I'm afraid",
+                 "Maybe next time, eh?",
+                 "Not quite up to standard - have another go!",
+                 "As my aunt used to say: 'Nope'",
+                 "Come on, Tim!",
+                 "Try again",
+                 "Could be better",
+                 "Narp")
   } else {
-    phrases <- "Incorrect. Please try again."
+    phrases <- "Not really, try again"
   }
   sample(phrases, 1)
 }
